@@ -1,0 +1,1 @@
+import{jsx as e}from"react/jsx-runtime";const t=({children:t})=>e("div",{className:"base-layout",children:t});export{t as B};

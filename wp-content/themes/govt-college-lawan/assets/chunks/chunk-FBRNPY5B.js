@@ -1,0 +1,1 @@
+import{r as e}from"react";import{R as t}from"react-router-dom";const r=e.createContext(null),a=()=>e.useContext(r),n=t.useNavigate;export{a,r as c,n as u};
