@@ -9,7 +9,7 @@ import Admissions from './pages/admissions'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/govt-college-lawan" >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
