@@ -5,7 +5,7 @@ import About from './pages/About'
 
 function App() {
   return (
-    <Router basename="/govt-college-lawan" >
+    <Router basename="/govt-college-lawan">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
