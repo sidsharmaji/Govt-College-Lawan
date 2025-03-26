@@ -2,10 +2,6 @@ import { useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './pages/About'
-import Academics from './pages/Academics'
-import Contact from './pages/contact'
-import Portal from './pages/Portal'
-import Admissions from './pages/admissions'
 
 function App() {
   return (
@@ -13,10 +9,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/academics" element={<Academics />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/portal" element={<Portal />} />
-        <Route path="/admissions" element={<Admissions />} />
       </Routes>
     </Router>
   )
@@ -77,12 +69,10 @@ const Home = () => {
 
           {/* Navigation Links */}
           <div className={`lg:flex items-center space-x-8 ${isMenuOpen ? 'block' : 'hidden'}`}>
-            <a href="/" className="text-gray-700 hover:text-primary transition-colors">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-primary transition-colors">About</a>
-            <a href="/academics" className="text-gray-700 hover:text-primary transition-colors">Academics</a>
-            <a href="/contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a>
-            <a href="/portal" className="text-gray-700 hover:text-primary transition-colors">Portal</a>
-            <a href="/admissions" className="text-gray-700 hover:text-primary transition-colors">Admissions</a>
+            <a href="#" className="text-gray-700 hover:text-primary transition-colors">Home</a>
+            <a href="#about" className="text-gray-700 hover:text-primary transition-colors">About</a>
+            <a href="#academics" className="text-gray-700 hover:text-primary transition-colors">Academics</a>
+            <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a>
           </div>
         </div>
       </nav>
