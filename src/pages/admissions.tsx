@@ -75,107 +75,6 @@ const Admissions = () => {
         </div>
       </nav>
 
-      {/* Application Form Modal */}
-      {isFormExpanded && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto"
-          >
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-bold text-primary">Online Application Form</h3>
-              <button
-                onClick={() => setIsFormExpanded(false)}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                ✕
-              </button>
-            </div>
-            
-            <form className="space-y-6">
-              <div className="space-y-4">
-                <h4 className="font-semibold text-lg">Personal Information</h4>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="font-semibold text-lg">Academic Details</h4>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <select className="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-primary/50">
-                    <option value="">Select Program</option>
-                    <option value="bsc">B.Sc Programs</option>
-                    <option value="ba">B.A Programs</option>
-                    <option value="msc">M.Sc Programs</option>
-                    <option value="ma">M.A Programs</option>
-                  </select>
-                  <select className="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-primary/50">
-                    <option value="">Select Course</option>
-                    <option value="cs">Computer Science</option>
-                    <option value="physics">Physics</option>
-                    <option value="chemistry">Chemistry</option>
-                    <option value="mathematics">Mathematics</option>
-                  </select>
-                </div>
-                <textarea
-                  placeholder="Previous Academic Background"
-                  rows={4}
-                  className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-primary/50"
-                />
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="font-semibold text-lg">Documents Upload</h4>
-                <div className="space-y-2">
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
-                    <p className="text-gray-600">Drop your academic certificates here or</p>
-                    <button type="button" className="text-primary hover:text-primary/80">browse files</button>
-                  </div>
-                  <p className="text-sm text-gray-500">Supported formats: PDF, JPG, PNG (Max size: 5MB)</p>
-                </div>
-              </div>
-
-              <div className="flex justify-end gap-4">
-                <button
-                  type="button"
-                  onClick={() => setIsFormExpanded(false)}
-                  className="px-6 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="px-6 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors"
-                >
-                  Submit Application
-                </button>
-              </div>
-            </form>
-          </motion.div>
-        </div>
-      )}
-
       {/* Content Sections */}
       <div className="container py-12">
         {/* Admission Process Section */}
@@ -403,11 +302,11 @@ const Admissions = () => {
                 <h3 className="text-2xl font-bold text-primary">International Students</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold mb-2">Admission Requirements</h4>
+                    <h4 className="font-semibold mb-2">Additional Requirements</h4>
                     <ul className="space-y-2 text-gray-600">
-                      <li>• Valid passport and visa</li>
-                      <li>• English proficiency test scores</li>
-                      <li>• Academic transcripts with translation</li>
+                      <li>• Valid passport and student visa</li>
+                      <li>• English language proficiency test scores</li>
+                      <li>• Translated academic documents</li>
                     </ul>
                   </div>
                 </div>

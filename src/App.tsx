@@ -3,13 +3,9 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import About from './pages/About'
 import Academics from './pages/Academics'
-import Contact from './pages/contact'
+import Admissions from './pages/admissions'
 import Events from './pages/events'
 import Portal from './pages/Portal'
-import Admissions from './pages/admissions'
-import HeroSlideshow from './components/HeroSlideshow'
-import QuickLinks from './components/QuickLinks'
-import NewsUpdates from './components/NewsUpdates'
 
 function App() {
   return (
@@ -18,10 +14,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/academics" element={<Academics />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/portal" element={<Portal />} />
         <Route path="/admissions" element={<Admissions />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/portal" element={<Portal />} />
       </Routes>
     </Router>
   )
@@ -85,10 +80,10 @@ const Home = () => {
             <Link to="/" className="text-gray-700 hover:text-primary transition-colors">Home</Link>
             <Link to="/about" className="text-gray-700 hover:text-primary transition-colors">About</Link>
             <Link to="/academics" className="text-gray-700 hover:text-primary transition-colors">Academics</Link>
+            <Link to="/admissions" className="text-gray-700 hover:text-primary transition-colors">Admissions</Link>
             <Link to="/events" className="text-gray-700 hover:text-primary transition-colors">Events</Link>
             <Link to="/portal" className="text-gray-700 hover:text-primary transition-colors">Portal</Link>
-            <Link to="/admissions" className="text-gray-700 hover:text-primary transition-colors">Admissions</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-primary transition-colors">Contact</Link>
+            <a href="#contact" className="text-gray-700 hover:text-primary transition-colors">Contact</a>
           </div>
         </div>
       </nav>
@@ -96,9 +91,48 @@ const Home = () => {
       {/* Hero Section */}
       <motion.section 
         style={{ scale, opacity }}
-        className="relative min-h-screen flex items-center justify-center py-32 px-4 overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center py-32 px-4 bg-gradient-to-br from-primary via-primary/90 to-primary/80 overflow-hidden"
       >
-        <HeroSlideshow />
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20 animate-float [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary/70 mix-blend-multiply"
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_100%)] animate-pulse-slow" />
+        </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="container relative text-center text-white space-y-8"
+        >
+          <h2 className="text-5xl md:text-7xl font-display font-bold leading-tight">
+            Welcome to the Future of
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent animate-text">
+              Education
+            </span>
+          </h2>
+          <p className="text-xl md:text-2xl max-w-2xl mx-auto text-neutral/90">
+            Empowering minds with innovative learning experiences and cutting-edge facilities
+          </p>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            <Link to="/about" className="btn-primary text-lg">
+              Discover More
+            </Link>
+            <Link to="/contact" className="btn-secondary text-lg">
+              Get in Touch
+            </Link>
+          </motion.div>
+        </motion.div>
       </motion.section>
 
       {/* About Section */}
@@ -145,12 +179,6 @@ const Home = () => {
           </div>
         </motion.div>
       </section>
-
-      {/* Quick Links */}
-      <QuickLinks />
-
-      {/* News Updates */}
-      <NewsUpdates />
 
       {/* Academics Section */}
       <section id="academics" className="section bg-neutral">
