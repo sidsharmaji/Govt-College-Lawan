@@ -33,3 +33,6 @@ The project includes a comprehensive ESLint setup for TypeScript and React. For 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+=======
+# govt-college-lawan
+>>>>>>> 570e75c33049c11a21db3f317693ca3d4ef33227
